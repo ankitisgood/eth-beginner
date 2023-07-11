@@ -12,15 +12,14 @@ create a contract together to fulfill the following requirements:
 5. Lastly, your burn function should have conditionals to make sure the balance of account is greater than or equal to the amount that is supposed to be burned.
 
 ## Description
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a three function that inputs the values, checks the condition using error handling statement and executes the function.
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a three function one for mapping, second for mining and third for burning the token.
 
-The check_require function sets a value but requires the input value to be greater than 0 for this it uses require() for input validation, If the 
-value is less than 0 than ot returns string value "Input is valid".
+The mapping function maps the address with balances.
 
-The check_assert function takes two uint value and their sum is stored in another variable. Now if the sum is less than 255, The function returns 
-"sum is valid" string, for this we use assert() for validation here.
+The mint function is used to mint the nft and add the minted amount to total_supply and balances of the address provided.
 
-The check_revert function takes two uint value and their sum is stored in another variable. Now if the sum is greater than 0 and less than 255, The function returns "no overflow" string and sum value, for this we use revert() for validation here. 
+The burn function is used to burn the nft that we have minted and subtract the burn amount from total_supply and balances of the address provided.
+Here, we have provided a if statement to check balance is greater than the value to be burnt, if balance is less than value than the further code will not execute.
 
 ## Getting Started
 
@@ -32,9 +31,9 @@ Once you are on the Remix website, create a new file by clicking on the "+" icon
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set heigher to "0.8.1" (or another compatible version), and then click on the "Compile error.sol" button.
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "errorhandlingcontract" contract from the dropdown menu, and then click on the "Deploy" button.
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "MyToken" contract from the dropdown menu, and then click on the "Deploy" button.
 
-Once the contract is deployed, you can interact with it by calling any of the three function to set the value, check_require function to perform the require statement, check_assert function to perform the assert statement and check_revert function to perform the revert function. you just need to enter the values and then click on call. 
+Once the contract is deployed, you can interact with it by passing the address. call any of the three function and set the value, and you can burn, mint or check the balance of your NFT.
 
 ## Author
 
